@@ -1,5 +1,4 @@
 import './myLabel.css';
-
 export interface IMyLabelProps {
     /**
     * Mensaje que se muestra en la etiqueta
@@ -8,7 +7,7 @@ export interface IMyLabelProps {
     /**
     * Tamaño de la etiqueta
     */
-    size : 'normal' | 'h1' | 'h2' | 'h3';
+    size: 'normal' | 'h1' | 'h2' | 'h3';
     /**
      *  Capitalizar la etiqueta
      */
@@ -26,20 +25,4 @@ export interface IMyLabelProps {
      */
     backgroundColor?: string;
 }
-
-export const MyLabel = ( {
-    label = 'No Label',
-    size  = 'normal',
-    AllCaps = false,
-    color = 'primary',
-    fontColor,
-    backgroundColor = 'transparent'
-}: IMyLabelProps ) => {
-    return (
-        <span 
-            className={ `label ${ size } text-${ color }` }
-            style={{ color: fontColor, backgroundColor }}>
-            { AllCaps ? label.toUpperCase() : label }
-        </span>
-    );
-};
+export declare const MyLabel: ({ label, size, AllCaps, color, fontColor, backgroundColor }: IMyLabelProps) => JSX.Element;
