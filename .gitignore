@@ -12,6 +12,7 @@
 *.log
 
 # production
+/dist
 /build
 /storybook-static
 # misc
