@@ -21,6 +21,10 @@ interface IMyLabelProps {
      * Color personaizado e la fuente
      */
     fontColor?: string;
+    /**
+     * Color personaizado e la fuente
+     */
+    backgroundColor?: string;
 }
 
 export const MyLabel = ( {
@@ -29,11 +33,12 @@ export const MyLabel = ( {
     AllCaps = false,
     color = 'primary',
     fontColor,
+    backgroundColor = 'transparent'
 }: IMyLabelProps ) => {
     return (
         <span 
             className={ `label ${ size } text-${ color }` }
-            style={{ color: fontColor }}>
+            style={{ color: fontColor, backgroundColor }}>
             { AllCaps ? label.toUpperCase() : label }
         </span>
     );
